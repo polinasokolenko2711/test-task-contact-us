@@ -1,0 +1,47 @@
+<div class="contact-form">
+    <div class="form-container">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+            <input class="form-control" formControlName="name" placeholder="Your Name*" name="name" 
+            [ngClass]="{ 'is-invalid': controls.name.dirty && controls.name.errors }"/>
+            <div *ngIf="controls.name.dirty && controls.name.invalid" class="invalid-feedback">
+                <div class="text-danger" *ngIf="controls.name.errors.required">Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" formControlName="email" placeholder="Your Email*" name="email" 
+            [ngClass]="{ 'is-invalid': controls.email.errors }"/>
+            <div *ngIf="controls.email.dirty && controls.email.invalid" class="invalid-feedback">
+                <div class="text-danger" *ngIf="controls.email.errors.email">Format should be email@emai.com</div>
+                <div class="text-danger" *ngIf="controls.email.errors.required">Email is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" formControlName="companyName" placeholder="Company Name*" name="companyName" 
+            [ngClass]="{ 'is-invalid': controls.companyName.dirty && controls.companyName.errors }"/>
+            <div *ngIf="controls.companyName.dirty && controls.companyName.invalid" class="invalid-feedback">
+                <div class="text-danger" *ngIf="controls.companyName.errors.required">Company Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" formControlName="country" placeholder="Country" name="country"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" formControlName="siteName" placeholder="Website name*" name="siteName" 
+            [ngClass]="{ 'is-invalid': controls.siteName.dirty && controls.siteName.errors }"/>
+            <div *ngIf="controls.siteName.dirty && controls.siteName.invalid" class="invalid-feedback">
+                <div class="text-danger" *ngIf="controls.siteName.errors.required">Country is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control text-area" formControlName="siteUrl" placeholder="Enter all your website URL (one URL per row)" name="siteUrl" 
+            [ngClass]="{ 'is-invalid': controls.email.dirty && controls.siteUrl.errors }"></textarea>
+        </div>
+        <div class="col-xs-12 btn-send">
+            <button class="btn" type="submit" [disabled]="form.invalid">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  

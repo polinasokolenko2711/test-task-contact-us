@@ -1,0 +1,27 @@
+
+
+.header {
+    text-align: center;
+    margin: 70px 0;
+    &>* {
+      text-align: center;
+    }
+
+
+    h1 {
+      color: #393939;
+      font-size: 40px;
+    }
+
+    hr {
+      width: 55px;
+      margin-top: 40px;
+      border: 2px solid #39cb74;
+    }
+
+    p {
+      color: #b3afb3;
+      padding-top: 20px;
+      font-size: 16px;
+    }
+}

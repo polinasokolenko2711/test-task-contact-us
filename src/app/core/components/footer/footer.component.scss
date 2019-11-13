@@ -1,0 +1,143 @@
+.wrapper {
+    background-color: #393939;
+    padding: 50px 0;
+    font-size: 14px;
+
+    .secure {
+        padding-top: 20px;
+        img {
+            width: 40px;
+        }
+        h3{
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline;
+        }
+    }
+
+    .list {
+        line-height: 22px;
+        list-style-type: none;
+        padding-left: 0;
+        padding-top: 15px;
+        
+        &.list-left {
+            padding-left: 50px;
+        }
+        &.list.list-center {
+            padding-left: 5px;
+        }
+        &.list.list-right {
+            margin-left: -15px;
+        }
+        li {  
+            margin: 5px 0;
+            &:first-child {
+                color: #fff;
+                font-weight: bold;
+                padding-bottom: 10px;
+                a {
+                    color: #fff;
+                }
+            }
+            &.dns {
+                button {
+                    border: 1px solid #797979;
+                    border-radius: 5px;
+                    background-color: #2e6da4;
+                    color: #c3bdbd;
+                }
+            }
+            a {
+                cursor: default;
+                color: #adadad;     
+            }
+        }
+    }
+
+    .request{
+        margin: 0 10px 0 -45px;
+
+        .req-demo {
+            button {
+                background-color: #39cb74;
+                padding: 17px 25px;
+                color: #fff;
+                border: 0px;
+                margin-top: 20px;
+            }
+        }
+
+        .links {
+            margin-top: 30px;
+            justify-content: space-around;
+
+            .linked-in, .twitter {
+                position: relative;
+                padding: 0 15px;
+                margin:  0 5px;
+            }                
+            .linked-in::after, .twitter::after {
+                position: absolute;
+                content: "";
+                width: 70px;
+                height: 2px;
+                top: 40px;
+                left: 0;
+                background-color: rgb(45, 105, 45);
+            }
+            .twitter {
+                right: 12px;
+            }    
+            img {
+                width: 40px;
+            }
+        }
+
+    }
+    .pr-0{
+        padding-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    .links {
+        .linked-in, .twitter {
+            padding: 0;
+            margin:  0;
+            img {
+                width: 30px!important;
+            }
+        }
+                        
+        .linked-in::after, .twitter::after {
+            position: absolute;
+            content: "";
+            width: 50px;
+            top: 30px;
+            left: 0;
+            background-color: rgb(45, 105, 45);
+        }   
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .wrapper {
+        margin-top: 15px;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .button, .socials  {
+        text-align: center !important;;
+    }
+
+    .list {
+        padding-left: 0 !important;
+    }
+}
